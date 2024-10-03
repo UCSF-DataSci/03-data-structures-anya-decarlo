@@ -31,7 +31,7 @@ def word_frequency(text):
         else: 
             frequencies[word] = 1
     
-    frequencies = dict(sorted(frequencies.items(())))
+    frequencies = dict(sorted(frequencies.items()))
     return frequencies
 
 # Scaffold for opening a file and running word_frequency() on the contents
