@@ -23,9 +23,10 @@ def word_frequency(text):
     frequencies = {} # Dictionary to store word frequencies
     # Your code here
     text = text.replace ('--' , " ")
+    text = text.replace ('_', ' ')
     words = text.lower().split()
     for word in words:
-        word = word.strip(" - -- . , ! : ;() [] \" ' ")
+        word = word.strip(" - -- . , ! ? : ;() [] \" ' ")
         if word in frequencies: 
             frequencies[word] += 1
         else: 
