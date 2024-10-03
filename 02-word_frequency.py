@@ -21,8 +21,8 @@ import sys
 
 def word_frequency(text):
     frequencies = {} # Dictionary to store word frequencies
-
     # Your code here
+    text = text.replace ('--' , " ")
     words = text.lower().split()
     for word in words:
         word = word.strip(" - -- . , ! : ;() [] \" ' ")
