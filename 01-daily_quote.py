@@ -12,15 +12,30 @@ Hint: Look up `random.choice()` to select a random item from a list. You can use
 """
 
 import random
+import datetime 
 from datetime import date
 
+ # Create a list of quotes here
 
-quotes = [
-    # Create a list of quotes here
+quotes = [ "Rather than love, than money, than fame, give me truth", 
+          "Success is not final, failure is not fatal: It is the courage to continue that counts.", 
+          "I have not failed. I've just found 10,000 ways that won't work.", 
+          "The elevator to success is out of order. You’ll have to use the stairs, one step at a time." , 
+          "If you’re going through hell, keep going.", 
+          "Go the extra mile. It’s never crowded there.", 
+          "Debugging: Being the detective in a crime drama where you are also the murderer.", 
+          "To err is human, but to really foul things up, you need a computer.", 
+          "There are 10 types of people in the world: those who understand binary and those who don’t.", 
+          "I had a life once... now I have assignments.",
+          "The code works. I have no idea why. The code doesn’t work. I have no idea why.", 
+          "My code is compiling, but am I?",
 ]
 
 def get_quote_of_the_day(quotes):
-    todays_quote = None
+    today = datetime.date.today()
+    random.seed(today.toordinal)
+    todays_quote = random.choice(quotes)
+
 
     # Your code here
     
