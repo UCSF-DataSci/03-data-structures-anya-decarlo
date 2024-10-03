@@ -25,7 +25,7 @@ def word_frequency(text):
     # Your code here
     words = text.lower().split()
     for word in words:
-        word = word.strip(". , ! : ;() [] \ ""  ")
+        word = word.strip(". , ! : ;() [] \" ' ")
         if word in frequencies: 
             frequencies[word] += 1
         else: 
@@ -57,3 +57,4 @@ if __name__ == "__main__":
     
     print(f"Word frequencies for '{filename}':")
     print(frequencies)
+
